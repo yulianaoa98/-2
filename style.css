@@ -1,0 +1,260 @@
+/* ======= БАЗОВІ СТИЛІ ======= */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+/* Контейнер екрану */
+.onboarding-container {
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Ілюстрації */
+.illustration-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 50%;
+    overflow: hidden;
+}
+
+.onboarding-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Контент */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* Кнопка заголовка */
+.headline-button {
+    background-color: #EF5350;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.headline-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Текст опису */
+.description-text p {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.5;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+/* Нижня навігація */
+.navigation-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.nav-button {
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: opacity 0.3s;
+}
+
+.nav-button:hover {
+    opacity: 0.8;
+}
+
+.skip-button {
+    background-color: #F5F5FF;
+    color: #333;
+}
+
+.next-button {
+    background-color: #EF5350;
+    color: #fff;
+}
+
+/* Точки (pagination) */
+.pagination-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    background-color: #F5F5FF;
+}
+
+.dot.active {
+    background-color: #EF5350;
+}
+
+/* ======= СТОРІНКА 4: РЕЄСТРАЦІЯ ======= */
+
+.screen {
+    width: 100%;
+    max-width: 420px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-family: 'Cherry Bomb One', cursive;
+    font-size: 36px;
+    color: #EF5350;
+    margin-bottom: 20px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #F5F5FF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.btn-login {
+    background-color: #EF5350;
+    color: #fff;
+}
+
+.btn-register {
+    color: #333;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+.input {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.forgot {
+    color: #757575;
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.btn-bottom {
+    background-color: #EF5350;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 50px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ======= АДАПТАЦІЯ ======= */
+
+/* Планшети */
+@media (max-width: 768px) {
+    .onboarding-container,
+    .screen {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .headline-button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .input {
+        font-size: 13px;
+    }
+}
+
+/* Телефони */
+@media (max-width: 480px) {
+    .description-text p {
+        font-size: 13px;
+    }
+
+    .nav-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .headline-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .btn-bottom {
+        padding: 10px 35px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+}
