@@ -1,0 +1,202 @@
+/* Загальні стилі та скидання */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Використовуємо Flexbox для центрування контейнера по центру екрана */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Контейнер, що імітує екран мобільного пристрою */
+.onboarding-container {
+    width: 100%;
+    /* ЗМІНА: Видалено max-width: 420px; для розтягування на всю ширину */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+/* Секція ілюстрації */
+.illustration-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* ВИСОТА: Встановлюємо 50% від висоти в'юпорта (vh) */
+    height: 50vh;
+    max-height: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* Додаємо для коректного обрахунку padding */
+}
+
+.onboarding-image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Секція контенту */
+.content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0;
+    align-items: center;
+    text-align: center;
+    /* ВИСОТА: flex-grow: 1 забезпечує, що ця секція займе решту простору (50vh) */
+    flex-grow: 1;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Заголовок-кнопка */
+.headline-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.headline-button {
+    background-color: #EF5350;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: none;
+    transition: background-color 0.3s;
+}
+
+.headline-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Опис */
+.description-text {
+    max-width: 350px;
+    flex-shrink: 0;
+    margin-bottom: auto;
+}
+
+.description-text p {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.5;
+    padding: 0 20px;
+    margin: 0;
+}
+
+/* Навігаційний футер (Skip, Dots, Next) */
+.navigation-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    margin-top: auto;
+    padding-bottom: 25px;
+}
+
+/* Спільні стилі для кнопок "SKIP" та "NEXT" (тепер посилання <a>) */
+.nav-button {
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav-button:hover {
+    opacity: 0.8;
+}
+
+/* Специфічні стилі для кнопки "SKIP" */
+.skip-button {
+    background-color: #F5F5FF;
+    color: #333;
+}
+
+/* Специфічні стилі для кнопки "NEXT" */
+.next-button {
+    background-color: #EF5350;
+    color: #ffffff;
+}
+
+/* Індикатори пагінації (точки) */
+.pagination-dots {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    background-color: #F5F5FF;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    background-color: #EF5350;
+}
+
+/* --- АДАПТИВНІСТЬ: МЕДІА-ЗАПИТИ --- */
+
+/* Налаштування для дуже маленьких екранів (наприклад, iPhone 5/SE, старі Android) */
+@media (max-height: 600px) {
+    .illustration-section {
+        /* Зберігаємо гнучкість на маленьких екранах */
+        height: 40vh;
+        max-height: 40%;
+    }
+
+    .headline-container {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    .description-text p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .navigation-footer {
+        padding: 10px 20px;
+    }
+}
+
+/* Налаштування для дуже вузьких екранів (менше 350px) */
+@media (max-width: 350px) {
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    .description-text p {
+        padding: 0 5px;
+    }
+}
