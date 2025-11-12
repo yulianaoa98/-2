@@ -49,13 +49,19 @@
     }
 
     .title { 
-      font-size: 8vw; 
-      max-font-size: 42px; 
+      font-size: 8vw; /* динамічний розмір */
       font-weight: 900; 
       color: #fff; 
       letter-spacing: 1px; 
       font-family: 'Cherry Bomb One', cursive; 
       text-align: center; 
+    }
+
+    /* Максимальний розмір шрифту для великих екранів */
+    @media (min-width: 525px) {
+      .title {
+        font-size: 42px;
+      }
     }
 
     /* Нижня частина */
@@ -152,13 +158,11 @@
 <body>
   <div class="screen">
 
-    <!-- Верхня половина (лого + назва) -->
     <div class="top-half">
       <img src="image4.png" alt="Logo" class="logo">
       <h1 class="title">FATED</h1>
     </div>
 
-    <!-- Нижня половина (кнопки + інпути) -->
     <div class="bottom-half">
       <div class="top-buttons">
         <a href="index5.html" class="btn-login">LOGIN</a>
