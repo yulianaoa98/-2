@@ -28,25 +28,21 @@ body {
   height: 100vh; 
   display: flex; 
   flex-direction: column; 
-  justify-content: space-between; 
-  padding: 40px 0; 
 }
 
-/* Верхня половина */
+/* Верхня половина - 50% */
 .top-half {
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin-top: 75px;
 }
-
 .logo { 
   width: 140px; 
   height: auto; 
   margin-bottom: 15px; 
 }
-
 .title { 
   font-size: 50px; 
   font-weight: 900; 
@@ -54,23 +50,23 @@ body {
   font-family: 'Cherry Bomb One', cursive; 
 }
 
-/* Нижня половина */
+/* Нижня половина - 50% */
 .bottom-half {
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%; 
   padding: 0 20px; 
-  margin-bottom: 100px;
-  margin-top: 108px;
 }
 
 .top-buttons { 
   display: flex; 
   justify-content: space-between; 
   width: 100%; 
-  margin-bottom: 20px; 
   gap: 18px; 
+  margin-bottom: 20px; 
 }
 
 .top-buttons a { 
@@ -79,7 +75,7 @@ body {
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  border-radius: 0px; 
+  border-radius: 0; 
   text-transform: uppercase; 
   font-weight: 900; 
   text-decoration: none; 
@@ -90,7 +86,6 @@ body {
   background-color: rgba(255,255,255,0.2); 
   color: #fff; 
 }
-
 .btn-register { 
   background-color: #fff; 
   color: #ff5f5f; 
@@ -118,7 +113,7 @@ body {
   text-transform: uppercase; 
   color: #fff; 
   align-self: flex-end; 
-  margin: 28px 0 28px; 
+  margin: 20px 0; 
   text-decoration: none; 
 }
 
@@ -139,13 +134,13 @@ body {
 <body>
 <div class="screen">
 
-  <!-- Верхня половина (лого + назва) -->
+  <!-- Верхня половина -->
   <div class="top-half">
     <img src="image4.png" class="logo" alt="Logo">
     <h1 class="title">FATED</h1>
   </div>
 
-  <!-- Нижня половина (кнопки + інпути) -->
+  <!-- Нижня половина -->
   <div class="bottom-half">
     <div class="top-buttons">
       <a href="#" class="btn-login">LOGIN</a>
