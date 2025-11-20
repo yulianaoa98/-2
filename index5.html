@@ -1,186 +1,167 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FATED - Логін</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  <style>
-    * { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-      font-family: 'Lato', sans-serif; 
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FATED - Логін</title>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Lato', sans-serif; 
+}
 
-    body { 
-      background-color: #FF5F5F; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      min-height: 100vh; 
-      width: 100%; 
-      color: #fff; 
-    }
+body { 
+  background-color: #FF5F5F; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  width: 100%; 
+}
 
-    .screen { 
-      width: 90%; 
-      max-width: 375px; 
-      height: 100vh; 
-      background-color: #ff5f5f; 
-      display: flex; 
-      flex-direction: column; 
-    }
+.screen { 
+  width: 90%; 
+  max-width: 375px; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  padding: 40px 0; 
+}
 
-    /* Верхня частина */
-    .top-half {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+/* Верхня половина */
+.top-half {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 75px;
+}
 
-    .logo { 
-      width: 20vw; 
-      max-width: 130px; 
-      height: auto; 
-      margin-bottom: 25px; 
-    }
+.logo { 
+  width: 140px; 
+  height: auto; 
+  margin-bottom: 15px; 
+}
 
-    .title { 
-      font-size: 8vw; /* динамічний розмір */
-      font-weight: 900; 
-      color: #fff; 
-      letter-spacing: 1px; 
-      font-family: 'Cherry Bomb One', cursive; 
-      text-align: center; 
-    }
+.title { 
+  font-size: 50px; 
+  font-weight: 900; 
+  color: #fff; 
+  font-family: 'Cherry Bomb One', cursive; 
+}
 
-    /* Обмеження максимального розміру шрифту */
-    @media (min-width: 525px) {
-      .title {
-        font-size: 42px;
-      }
-    }
+/* Нижня половина */
+.bottom-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+  padding: 0 20px; 
+  margin-bottom: 100px;
+  margin-top: 108px;
+}
 
-    /* Нижня частина */
-    .bottom-half {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0 20px;
-    }
+.top-buttons { 
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  margin-bottom: 20px; 
+  gap: 18px; 
+}
 
-    .top-buttons { 
-      display: flex; 
-      justify-content: space-between; 
-      width: 100%; 
-      margin-bottom: 40px; 
-      gap: 15px; 
-    }
+.top-buttons a { 
+  width: 130px; 
+  height: 30px; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  border-radius: 0px; 
+  text-transform: uppercase; 
+  font-weight: 900; 
+  text-decoration: none; 
+  font-size: 12px; 
+}
 
-    .top-buttons a { 
-      flex: 1; 
-      height: 40px; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      border-radius: 8px; 
-      text-transform: uppercase; 
-      font-weight: 900; 
-      text-decoration: none; 
-      cursor: pointer; 
-      transition: 0.3s; 
-    }
+.btn-login { 
+  background-color: rgba(255,255,255,0.2); 
+  color: #fff; 
+}
 
-    .btn-login { 
-      background-color: rgba(255, 255, 255, 0.1); 
-      color: #fff; 
-    }
+.btn-register { 
+  background-color: #fff; 
+  color: #ff5f5f; 
+}
 
-    .btn-register { 
-      background-color: #fff; 
-      color: #ff5f5f; 
-    }
+.inputs { 
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+}
 
-    .inputs { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 15px; 
-      margin-bottom: 15px; 
-      width: 100%; 
-    }
+.input { 
+  width: 100%; 
+  padding: 15px 0; 
+  background-color: #f5f5ff; 
+  border-radius: 5px; 
+  border: none; 
+  text-align: center; 
+  font-size: 10px; 
+}
 
-    .input { 
-      width: 100%; 
-      padding: 15px 0; 
-      background-color: #f5f5ff; 
-      border: none; 
-      border-radius: 8px; 
-      text-align: center; 
-      font-size: 14px; 
-      color: #000; 
-    }
+.forgot { 
+  font-size: 10px; 
+  text-transform: uppercase; 
+  color: #fff; 
+  align-self: flex-end; 
+  margin: 28px 0 28px; 
+  text-decoration: none; 
+}
 
-    .forgot { 
-      font-size: 12px; 
-      color: #fff; 
-      text-decoration: none; 
-      align-self: flex-end; 
-      margin-bottom: 20px; 
-      text-transform: uppercase; 
-    }
-
-    .btn-bottom { 
-      width: 100%; 
-      padding: 15px 0; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center; 
-      background-color: #f5f5ff; 
-      color: #ff5f5f; 
-      border-radius: 8px; 
-      font-weight: 900; 
-      text-decoration: none; 
-      cursor: pointer; 
-      transition: 0.3s; 
-      text-transform: uppercase; 
-    }
-
-    .btn-bottom:hover { 
-      background-color: #fff; 
-    }
-  </style>
+.btn-bottom { 
+  width: 100%; 
+  padding: 15px 0; 
+  background-color: #fff; 
+  color: #ff5f5f; 
+  border-radius: 5px; 
+  text-align: center; 
+  font-weight: 900; 
+  text-transform: uppercase; 
+  text-decoration: none; 
+  font-size: 10px; 
+}
+</style>
 </head>
 <body>
-  <div class="screen">
+<div class="screen">
 
-    <!-- Верхня половина (лого + назва) -->
-    <div class="top-half">
-      <img src="image4.png" alt="Logo" class="logo">
-      <h1 class="title">FATED</h1>
-    </div>
-
-    <!-- Нижня половина (кнопки + інпути) -->
-    <div class="bottom-half">
-      <div class="top-buttons">
-        <a href="#" class="btn-login">LOGIN</a>
-        <a href="index4.html" class="btn-register">REGISTER</a>
-      </div>
-
-      <div class="inputs">
-        <input type="text" class="input" placeholder="user name">
-        <input type="password" class="input" placeholder="password">
-      </div>
-
-      <a href="#" class="forgot">FORGOT PASSWORD?</a>
-
-      <a href="#" class="btn-bottom">LOGIN</a>
-    </div>
-
+  <!-- Верхня половина (лого + назва) -->
+  <div class="top-half">
+    <img src="image4.png" class="logo" alt="Logo">
+    <h1 class="title">FATED</h1>
   </div>
+
+  <!-- Нижня половина (кнопки + інпути) -->
+  <div class="bottom-half">
+    <div class="top-buttons">
+      <a href="#" class="btn-login">LOGIN</a>
+      <a href="index4.html" class="btn-register">REGISTER</a>
+    </div>
+
+    <div class="inputs">
+      <input type="text" class="input" placeholder="user name">
+      <input type="password" class="input" placeholder="password">
+    </div>
+
+    <a href="#" class="forgot">FORGOT PASSWORD?</a>
+
+    <a href="#" class="btn-bottom">LOGIN</a>
+  </div>
+
+</div>
 </body>
 </html>
