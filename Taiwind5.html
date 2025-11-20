@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FATED - Логін</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FATED - Реєстрація</title>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body { font-family: 'Lato', sans-serif; }
+.logo-text { font-family: 'Cherry Bomb One', cursive; }
+</style>
 </head>
-<body class="bg-[#FF5F5F] flex justify-center items-center min-h-screen text-white font-sans">
-  <div class="w-[90%] max-w-[375px] h-screen flex flex-col">
+<body class="bg-[#FF5F5F] flex justify-center items-center min-h-screen w-full">
 
-    <!-- Верхня половина -->
-    <div class="flex flex-col justify-center items-center flex-1">
-      <img src="image4.png" alt="Logo" class="w-[20vw] max-w-[130px] mb-6">
-      <h1 class="text-white font-extrabold text-4xl text-center font-[\'Cherry Bomb One\',cursive]">FATED</h1>
+<div class="screen flex flex-col justify-between w-[90%] max-w-[375px] h-screen py-[40px]">
+
+  <!-- Верхня половина (лого + назва) -->
+  <div class="top-half flex flex-col items-center justify-start mt-[75px]">
+    <img src="image4.png" class="logo w-[140px] h-auto mb-[15px]" alt="Logo">
+    <h1 class="title text-[50px] font-black text-white logo-text">FATED</h1>
+  </div>
+
+  <!-- Нижня половина (кнопки + інпути) -->
+  <div class="bottom-half flex flex-col items-center w-full px-[20px] mt-[108px] mb-[100px]">
+
+    <div class="top-buttons flex justify-between w-full gap-[18px] mb-[20px]">
+      <a href="index5.html" class="btn-login w-[130px] h-[30px] flex justify-center items-center bg-white/20 text-white uppercase font-black text-[12px] rounded-none">LOGIN</a>
+      <a href="#" class="btn-register w-[130px] h-[30px] flex justify-center items-center bg-white text-[#FF5F5F] uppercase font-black text-[12px] rounded-none">REGISTER</a>
     </div>
 
-    <!-- Нижня половина -->
-    <div class="flex flex-col justify-center items-center flex-1 px-5">
-      <div class="flex gap-4 w-full mb-10">
-        <a href="#" class="flex-1 h-10 flex justify-center items-center bg-white/10 text-white font-black uppercase rounded-lg transition duration-300">LOGIN</a>
-        <a href="index4.html" class="flex-1 h-10 flex justify-center items-center bg-white text-[#FF5F5F] font-black uppercase rounded-lg transition duration-300">REGISTER</a>
-      </div>
-
-      <div class="flex flex-col gap-4 w-full mb-4">
-        <input type="text" placeholder="user name" class="w-full py-3 text-center text-black rounded-lg border-none bg-[#f5f5ff] text-sm">
-        <input type="password" placeholder="password" class="w-full py-3 text-center text-black rounded-lg border-none bg-[#f5f5ff] text-sm">
-      </div>
-
-      <a href="#" class="self-end mb-5 text-xs uppercase text-white">FORGOT PASSWORD?</a>
-
-      <a href="#" class="w-full py-3 flex justify-center items-center bg-[#f5f5ff] text-[#FF5F5F] font-black uppercase rounded-lg transition duration-300 hover:bg-white">LOGIN</a>
+    <div class="inputs flex flex-col w-full gap-[8px] mb-[0]">
+      <input type="text" placeholder="user name" class="input w-full py-[15px] text-[10px] text-center bg-[#f5f5ff] rounded-[5px] border-none">
+      <input type="password" placeholder="password" class="input w-full py-[15px] text-[10px] text-center bg-[#f5f5ff] rounded-[5px] border-none">
+      <input type="email" placeholder="email" class="input w-full py-[15px] text-[10px] text-center bg-[#f5f5ff] rounded-[5px] border-none">
     </div>
+
+    <a href="#" class="forgot self-end text-[10px] uppercase text-white my-[28px] no-underline">FORGOT PASSWORD?</a>
+
+    <a href="#" class="btn-bottom w-full py-[15px] text-[10px] font-black text-[#FF5F5F] bg-white rounded-[5px] text-center uppercase no-underline">REGISTER</a>
 
   </div>
+
+</div>
+
 </body>
 </html>
